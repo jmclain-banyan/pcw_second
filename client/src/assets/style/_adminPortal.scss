@@ -1,0 +1,41 @@
+.admin-portal {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .user-card {
+    border: 1px solid $black;
+    width: (94% / 2);
+    margin-bottom: 15px;
+    background: $gray-600;
+
+    div {
+      margin: 10px;
+      background: $white;
+      padding-left: 5px;
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    button {
+      width: 100%;
+      margin-bottom: 5px;
+
+      &:hover {
+        cursor: pointer;
+        background: $red;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .admin-portal {
+    .user-card {
+      width: (94% / 5);
+    }
+  }
+}

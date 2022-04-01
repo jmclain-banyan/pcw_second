@@ -1,0 +1,64 @@
+.shopping-btns-wrapper {
+  width: 95%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    width: (98% / 3);
+    padding: 5px;
+    font-family: RumRaisin;
+    font-size: 1.1rem;
+    border: 1px solid $black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba($black, 0.65);
+    transition: all 0.1s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+      border-color: $white;
+      text-shadow: 0 0 4px $white;
+    }
+
+    &:active {
+      box-shadow: 0 0 4px rgba($black, 0.8);
+      transform: translateY(2px);
+    }
+
+    &:nth-child(1) {
+      background: linear-gradient(
+        to bottom,
+        lighten($green, 15%),
+        darken($green, 10%)
+      );
+
+      i {
+        &:nth-child(1) {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      background: linear-gradient( to bottom, lighten($yellow, 10%), darken($yellow, 25%));
+    }
+
+    &:nth-child(3) {
+      background: linear-gradient(
+        to bottom,
+        lighten($red, 15%),
+        darken($red, 10%)
+      );
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .shopping-btns-wrapper {
+    width: 60%;
+  }
+}

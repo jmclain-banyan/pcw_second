@@ -1,0 +1,68 @@
+.alert-error {
+  display: flex;
+  background: $gray-200;
+  font-size: 0.8rem;
+  flex-direction: row;
+  padding: 10px;
+  margin: 0 5px;
+  font-family: Ubuntu;
+
+  .message {
+    align-items: flex-start;
+
+    .status {
+      color: $red;
+      font-size: 1rem;
+      font-weight: bold;
+
+      &-text {
+        color: $red;
+        font-size: 0.75rem;
+      }
+
+      &-id {
+        font-size: 0.75rem;
+      }
+
+      &-msg {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .dismiss-btn {
+    align-items: flex-end;
+    align-self: center;
+    margin-left: auto;
+    font-size: 1.2rem;
+  }
+}
+
+.alert-success {
+  display: flex;
+  background: $success;
+  flex-direction: row;
+  padding: 10px;
+  margin: 0 5px;
+  font-family: Ubuntu;
+
+  .message {
+    align-items: flex-start;
+
+    .status {
+
+      &-msg {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .dismiss-btn {
+    align-items: flex-end;
+    align-self: center;
+    margin-left: auto;
+    font-size: 1.2rem;
+  }
+}

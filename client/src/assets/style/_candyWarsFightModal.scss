@@ -1,0 +1,180 @@
+.fight-modal-container {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba($black, 0.5);
+
+  .fight-modal {
+    position: absolute;
+    background: $gray-300;
+    width: 80%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 15px 25px;
+    border-radius: 10px;
+    border: 15px solid $orange;
+    border-right-color: darken($orange, 20%);
+    border-bottom-color: darken($orange, 20%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_health {
+      display: flex;
+      justify-content: space-between;
+
+      .bandit-health,
+      .player-health {
+        text-align: center;
+        // border: 1px solid $black;
+        padding: 0 0 5px;
+        border-radius: 5px;
+        background: $gray-600;
+        box-shadow: 2px 2px 4px rgba($black, 0.65);
+
+        .b-hp-label,
+        .p-hp-label {
+          font-weight: 400;
+          font-size: 1.2rem;
+          background: lighten($black, 15%);
+          padding: 0 5px 3px;
+          color: $white;
+          border-radius: 5px 5px 0 0;
+        }
+
+        .b-hp,
+        .p-hp {
+          font-family: Berkshire;
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &_dialog {
+      text-align: center;
+      font-size: 1.35rem;
+
+      p {
+        span {
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
+      }
+
+      &-exit {
+        p {
+          margin-bottom: 5px;
+        }
+
+        button {
+          font-family: Chewy;
+          font-size: 1.8rem;
+          padding: 0 35px;
+          border-radius: 50px;
+          border: 1px solid $black;
+          background: linear-gradient(to bottom, lighten($green, 15%), $green);
+          box-shadow: 2px 2px 4px rgba($black, 0.65);
+          transition: all 0.1s ease-in-out;
+
+          &:focus {
+            outline: none;
+          }
+
+          &:hover {
+            cursor: pointer;
+            text-shadow: 0 0 5px $white;
+          }
+
+          &:active {
+            box-shadow: 0 0 4px rgba($black, 0.8);
+            transform: translateY(2px);
+          }
+        }
+      }
+    }
+
+    .fight-action-btns {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+
+      button {
+        width: (85% / 2);
+        font-family: Chewy;
+        font-size: 1.5rem;
+        padding: 5px 0;
+        border: 1px solid $black;
+        border-radius: 50px;
+        box-shadow: 2px 2px 4px rgba($black, 0.65);
+        transition: all 0.1s ease-in-out;
+
+        &:nth-child(1) {
+          background: linear-gradient(to bottom, lighten($blue, 30%), $blue);
+        }
+
+        &:nth-child(2) {
+          background: linear-gradient(to bottom, lighten($pink, 20%), $pink);
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          cursor: pointer;
+          text-shadow: 0 0 5px $white;
+        }
+
+        &:active {
+          box-shadow: 0 0 4px rgba($black, 0.8);
+          transform: translateY(2px);
+        }
+
+        &:disabled {
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+}
+
+.fight-cloud {
+    height: 100%;
+    width: 100%;
+    animation: fight 0.75s linear infinite;
+    filter: drop-shadow(0 15px 15px rgba($black, 0.75));
+}
+
+@keyframes fight {
+    0%{
+        transform: rotate(0deg);
+    }
+    25% {
+        filter: drop-shadow(0 25px 25px rgba($black, 0.65));
+        transform: rotate(35deg) translateX(25px) scale(1.1);
+    }
+    50% {
+        filter: drop-shadow(0 10px 15px rgba($black, 0.75));
+        transform: rotate(0deg) scale(0.9);
+    }
+    75% {
+        filter: drop-shadow(0 25px 25px rgba($black, 0.65));
+        transform: rotate(-35deg)  translateX(-25px) scale(1.1);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media (min-width: 1000px) {
+  .fight-modal-container {
+    .fight-modal {
+      width: 45%;
+    }
+  }
+}

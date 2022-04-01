@@ -1,0 +1,76 @@
+@font-face {
+  font-family: Ubuntu;
+  src: url(../font/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+  font-family: SpicyRice;
+  src: url(../font/SpicyRice-Regular.ttf);
+}
+
+@font-face {
+  font-family: Slacky;
+  src: url(../font/Slackey.ttf);
+}
+
+@font-face {
+  font-family: Chewy;
+  src: url(../font/Chewy.ttf);
+}
+
+@font-face {
+  font-family: Fasnite;
+  src: url(../font/FascinateInline-Regular.ttf)
+}
+
+@font-face {
+  font-family: Sansita;
+  src: url(../font/SansitaOne.ttf);
+}
+
+@font-face {
+  font-family: RumRaisin;
+  src: url(../font/RumRaisin-Regular.ttf);
+}
+
+@font-face {
+  font-family: Hanna;
+  src: url(../font/BM-HANNA.ttf);
+}
+
+@font-face {
+  font-family: Berkshire;
+  src: url(../font/BerkshireSwash-Regular.ttf);
+}
+
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #aea79f;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #333;
+$gray-900: #212529;
+$black: #000;
+
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #772953;
+$pink: #e83e8c;
+$red: #df382c;
+$orange: #e95420;
+$yellow: #efb73e;
+$green: #38b44a;
+$teal: #20c997;
+$cyan: #17a2b8;
+
+$primary: $orange;
+$secondary: $gray-500;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-200;
+$dark: $purple;

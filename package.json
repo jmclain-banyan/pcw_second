@@ -1,0 +1,36 @@
+{
+  "name": "J.McLain",
+  "version": "1.0.0",
+  "description": "An unknown MERN projct",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devServer": "nodemon server.js",
+    "devClient": "npm start --prefix client",
+    "dev": "concurrently \"npm run devServer\" \"npm run devClient\""
+  },
+  "keywords": [
+    "mongoose",
+    "express",
+    "react",
+    "node",
+    "mern stack",
+    "awesome",
+    "oranage dev"
+  ],
+  "author": "Josh McLain",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.16"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}

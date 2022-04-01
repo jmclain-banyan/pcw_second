@@ -1,0 +1,136 @@
+.store-modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba($black, 0.5);
+  z-index: 1;
+
+  .store-modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+    background: $gray-600;
+    padding: 0 0 5px;
+    border: 1px solid $white;
+
+    &-close {
+      position: absolute;
+      right: 0;
+      background: transparent;
+      border: none;
+      margin: 5px;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        text-shadow: 0 0 4px $white;
+      }
+    }
+
+    h3 {
+      background: linear-gradient(to bottom, $teal 50%, darken($teal, 20%));
+      text-shadow: 0 2px 3px $white;
+      margin: 0;
+      padding: 10px 10px 15px;
+      font-family: Berkshire;
+      font-size: 1.8rem;
+      border-bottom: 1px solid $black;
+    }
+
+    div {
+      border: 1px solid $black;
+      margin: 5px 5px 0;
+      text-align: center;
+      background: $gray-200;
+
+      p {
+        margin: 0;
+        padding: 5px 0 8px;
+        font-family: Berkshire;
+        font-size: 1.25rem;
+      }
+
+      button {
+        margin: 0 0 5px;
+        border: 1px solid $black;
+        font-family: Chewy;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        padding: 0 10px;
+        box-shadow: 2px 2px 4px rgba($black, 0.65);
+        transition: all 0.1s ease-in-out;
+        // background: linear-gradient(
+        //   to bottom,
+        //   lighten($blue, 25%),
+        //   lighten($blue, 10%)
+        // );
+
+        &:focus {
+          outline: none;
+        }
+
+        &:active {
+          box-shadow: 0 0 4px rgba($black, 0.8);
+          transform: translateY(2px);
+        }
+
+        &:hover {
+          cursor: pointer;
+          border-color: $white;
+        }
+
+        &:disabled {
+          // background: linear-gradient(
+          //   to bottom,
+          //   lighten($purple, 30%),
+          //   lighten($purple, 10%)
+          // );
+          color: $black;
+          opacity: 0.85;
+
+          &:hover {
+            border: 1px solid $black;
+            cursor: not-allowed;
+          }
+        }
+      }
+
+      .purchse {
+        background: linear-gradient(
+          to bottom,
+          lighten($blue, 25%),
+          lighten($blue, 10%)
+        );
+      }
+
+      .insufFicient-cash {
+        background: linear-gradient(
+          to bottom,
+          lighten($orange, 30%),
+          lighten($orange, 10%)
+        );
+      }
+
+      .equipped {
+        background: linear-gradient(
+          to bottom,
+          lighten($purple, 30%),
+          lighten($purple, 10%)
+        );
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .store-modal-container {
+    .store-modal {
+      width: 45%;
+    }
+  }
+}

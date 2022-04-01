@@ -1,0 +1,152 @@
+.home-page {
+  .hero {
+    text-align: center;
+    background: linear-gradient(to bottom, $blue, $pink);
+    padding: 45px 0 15px;
+    border-bottom: 3px solid $black;
+
+    h1 {
+      font-family: Sansita;
+      font-size: 2.5rem;
+      margin-top: 0;
+      text-shadow: 0 2px 0 $white;
+    }
+
+    p {
+      font-family: Hanna;
+      font-size: 1.1rem;
+      text-shadow: 2px 2px 4px rgba($white, 0.65);
+    }
+  }
+
+  .social {
+    background: $gray-400;
+    padding: 35px 0 25px;
+    text-align: center;
+    border-bottom: 3px solid $black;
+
+    span {
+      font-family: Chewy;
+      font-size: 2.2rem;
+    }
+
+    &-links {
+      i {
+        font-size: 2.8rem;
+        padding: 10px 15px 0;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.4) rotate(360deg);
+          text-shadow: 0 4px 8px rgba($black, 0.4);
+        }
+      }
+
+      .fa-facebook-f {
+        color: #1877f2;
+      }
+
+      .fa-twitter {
+        color: #1da1f2;
+      }
+
+      .fa-instagram {
+        color: #c32aa3;
+      }
+
+      .fa-snapchat-ghost {
+        color: #fffc00;
+      }
+    }
+  }
+
+  .author {
+    text-align: center;
+    background: $gray-500;
+    padding: 20px 0 15px;
+    border-bottom: 3px solid $black;
+
+    h3 {
+      margin: 0 0 20px;
+      font-family: Berkshire;
+      font-size: 1.9rem;
+    }
+
+    &-info {
+      span {
+        font-weight: 900;
+      }
+
+      &-links {
+        margin: 15px 0 0;
+
+        i {
+          font-size: 2.2rem;
+          padding: 10px 20px 0;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+          }
+        }
+
+        .fa-linkedin-in {
+          color: #007bb5;
+        }
+
+        .fa-github {
+          color: #211f1f;
+        }
+
+        .fa-google-plus-g {
+          color: #ea4335;
+        }
+      }
+    }
+  }
+
+  .tech-stack {
+    text-align: center;
+    background: $gray-700;
+    padding: 20px 0;
+    border-bottom: 5px solid $black;
+
+    &-logos {
+      margin: 5px 0 0;
+
+      i {
+        font-size: 2rem;
+        padding: 10px 15px;
+      }
+
+      .fa-html5 {
+        color: #f05353;
+      }
+
+      .fa-js {
+        color: #f6d63a;
+      }
+
+      .fa-sass {
+        color: #fa8397;
+      }
+
+      .fa-react {
+        color: #329efc;
+      }
+
+      .fa-node {
+        color: #33c133;
+      }
+    }
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 5px;
+  }
+}

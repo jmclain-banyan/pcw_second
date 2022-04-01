@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb://localhost/project_candywars",
+    "jwtSecret": "mySecret"
+}

@@ -1,0 +1,211 @@
+.loading-bar-wrapper {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+
+  .progress {
+    width: 100%;
+    background: $gray-300;
+    height: 40px;
+
+    .bar {
+      height: 100%;
+      background: $green;
+      animation: loading 1s linear 1;
+    }
+  }
+}
+
+@keyframes loading {
+  from {
+    width: 1%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.game-over {
+  border: 3px solid $black;
+  height: 40vh;
+  width: 95%;
+  margin: 70px auto;
+  background: $gray-300;
+
+  .header {
+    width: 100%;
+    text-align: center;
+    background: radial-gradient($pink, $blue);
+    border-bottom: 3px solid $black;
+
+    h3 {
+      font-family: Slacky;
+      font-size: 3.5rem;
+      font-weight: 400;
+      margin: 0;
+      letter-spacing: 5px;
+      text-shadow: 0 2px 0 $white;
+    }
+  }
+
+  .score-form {
+    text-align: center;
+    padding: 0 0 15px;
+
+    p {
+      font-size: 2rem;
+      font-weight: 600;
+      text-decoration: underline;
+
+      input {
+        background: transparent;
+        border: none;
+        color: $black;
+        font-family: Berkshire;
+        font-size: 2.8rem;
+        width: 150px;
+        margin-left: 25px;
+      }
+    }
+
+    input[type="text"] {
+      width: 120px;
+      text-align: center;
+      padding: 5px 5px 0;
+      letter-spacing: 2px;
+      font-family: Chewy;
+      font-size: 2.5rem;
+      border: 1px solid $black;
+    }
+
+    button {
+      font-family: Chewy;
+      font-size: 2.5rem;
+      margin-left: 50px;
+      border: 1px solid $black;
+      border-radius: 50px;
+      padding: 0 15px;
+      background: linear-gradient(to bottom, $green, darken($green, 15%));
+      box-shadow: 4px 4px 8px rgba($black, 0.65);
+      transition: all 0.1s ease-in-out;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        cursor: pointer;
+        text-shadow: 0 0 4px $white;
+        border-color: darken($green, 20%);
+      }
+
+      &:active {
+        box-shadow: 0 0 8px rgba($black, 0.8);
+        transform: translateY(4px);
+      }
+    }
+  }
+}
+
+.top-scores-container {
+  border: 3px solid $black;
+  width: 95%;
+  margin: 10px auto 0;
+
+  .header {
+    background: radial-gradient($pink, $blue);
+    border-bottom: 3px solid $black;
+
+    h3 {
+      text-align: center;
+      font-family: Slacky;
+      font-weight: 400;
+      font-size: 2.8rem;
+      margin: 0;
+      letter-spacing: 5px;
+      text-shadow: 0 2px 0 $white;
+    }
+  }
+
+  .top-scores-wrapper {
+    .top-scores-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background: lighten($purple, 25%);
+      border-bottom: 1px solid $black;
+      padding: 5px 0;
+
+      span {
+        font-size: 1.8rem;
+        text-decoration: underline;
+        font-weight: 600;
+      }
+    }
+
+    .top-scores {
+      margin-top: 5px;
+
+      .score-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background: $gray-200;
+        margin-bottom: 5px;
+
+        span {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .btn {
+    text-align: center;
+    padding: 5px 0;
+
+    button {
+      font-family: Chewy;
+      font-size: 2rem;
+      border: 2px solid $black;
+      border-radius: 5px;
+      background: linear-gradient(
+        to bottom,
+        lighten($orange, 10%),
+        darken($orange, 10%)
+      );
+      padding: 0 15px;
+      box-shadow: 4px 4px 8px rgba($black, 0.65);
+      transition: all 0.1s ease-in-out;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        cursor: pointer;
+        border-color: $white;
+        text-shadow: 0 0 4px $white;
+      }
+
+      &:active {
+        box-shadow: 0 0 8px rgba($black, 0.8);
+        transform: translateY(4px);
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .game-over {
+    width: 65%;
+  }
+
+  .top-scores-container {
+    width: 55%;
+  }
+}

@@ -1,0 +1,126 @@
+.dash-home {
+    width: 100%;
+
+  .header {
+    width: 95%;
+    text-align: center;
+    margin: 15px auto 0;
+    border: 3px solid $black;
+    padding: 35px 10px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, $white 40%, $red);
+
+    h1 {
+      font-family: Fasnite;
+      font-weight: 400;
+      font-size: 2.2rem;
+      margin: 0;
+    }
+  }
+
+  .play-btn-wrapper {
+    width: 95%;
+    margin: 15px auto 0;
+    text-align: center;
+
+    button {
+      font-family: Chewy;
+      font-size: 2.2rem;
+      padding: 5px 25px;
+      border: 1px solid $black;
+      box-shadow: 4px 4px 8px rgba($black, 0.65);
+      border-radius: 5px;
+      background: linear-gradient(
+        to bottom,
+        lighten($orange, 20%),
+        darken($orange, 20%)
+      );
+      transition: all 0.1s ease-in-out;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        cursor: pointer;
+        text-shadow: 0 0 4px $white;
+        border-color: $white;
+      }
+
+      &:active {
+        box-shadow: 0 0 8px rgba($black, 0.8);
+        transform: translateY(4px);
+      }
+    }
+  }
+
+  .history-header {
+    width: 80%;
+    text-align: center;
+    margin: 25px auto;
+    border: 1px solid $black;
+    padding: 15px 0;
+    background: radial-gradient($pink, $blue);
+
+    h3 {
+      font-family: Hanna;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      margin: 0;
+      text-shadow: 0 2px 0 $white;
+    }
+  }
+
+  .history-cards-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    div {
+      border: 1px solid $black;
+      width: (95% / 4);
+      margin-bottom: 5px;
+      text-align: center;
+      background: $white;
+
+      p {
+        margin: 0;
+
+        &:nth-child(1) {
+          background: $gray-400;
+          padding: 5px 0;
+          font-family: Sansita;
+          font-size: 1.2rem;
+          border-bottom: 1px solid $black;
+        }
+
+        &:nth-child(2) {
+          margin: 5px 0;
+          font-size: 1.5rem;
+          font-weight: bold;
+          letter-spacing: 5px;
+        }
+
+        &:nth-child(3) {
+          margin: 0 0 5px;
+          font-size: 0.8rem;
+
+          span {
+            font-family: Berkshire;
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+    .dash-home {
+        width: 70%;
+        margin: 0 auto;
+    }
+}

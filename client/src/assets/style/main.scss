@@ -1,0 +1,30 @@
+@import "./varibles";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #666;
+  font-family: Ubuntu;
+}
+
+@import "./navbar";
+@import "./homePage";
+@import "./dashboard";
+@import "./adminPortal";
+@import "./modals";
+@import "./alertMessage";
+@import "./loadSpinner";
+
+@import "./candyWarsDisplay";
+@import "./candyWarsLocationBtns";
+@import "./candyWarsShoppingBtns";
+@import "./candyWarsMarket";
+@import "./candyWarsStoreModal";
+@import "./candyWarsFightModal";
+@import "./candyWarsLoanSharkModal";
+@import "./candyWarsStart";
+@import "./candyWarsEndGame";

@@ -1,0 +1,88 @@
+.stats-display-wrapper {
+  background: $gray-900;
+  width: 95%;
+  margin: 0 auto;
+  overflow: auto;
+  font-size: 0.75rem;
+  border: 7px solid $gray-500;
+  border-top: none;
+  border-bottom-color: darken($gray-500, 20%);
+
+  .player-stats {
+    float: left;
+
+    p {
+      margin: 0;
+      color: $white;
+      padding: 2.3px 5px;
+
+      &:nth-child(1) {
+        span {
+          color: $green;
+        }
+      }
+
+      &:nth-child(2) {
+        span {
+          color: $pink;
+        }
+      }
+
+      &:nth-child(3) {
+        span {
+          color: $blue;
+        }
+      }
+
+      &:nth-child(4) {
+        span {
+          color: $orange;
+        }
+      }
+
+      &:nth-child(5) {
+        span {
+          color: $yellow;
+        }
+      }
+
+      &:nth-child(6) {
+        span {
+          color: $red;
+        }
+      }
+    }
+  }
+
+  .player-inventory {
+    float: right;
+    text-align: end;
+    margin: 0;
+    list-style: none;
+
+    li {
+      color: $indigo;
+      padding: 1px 5px;
+
+      span {
+        &:nth-child(1) {
+          color: $cyan;
+        }
+
+        &:nth-child(2) {
+          color: $yellow;
+        }
+
+        &:nth-child(3) {
+          color: $teal;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+    .stats-display-wrapper {
+        width: 60%;
+    }
+}

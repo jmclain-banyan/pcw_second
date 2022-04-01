@@ -1,0 +1,97 @@
+.navbar {
+  background: linear-gradient(to right, white 45%, transparent),
+    repeating-linear-gradient(-45deg, white 0px, white 10px, red 10px, red 20px);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 3px solid $dark;
+
+  &-logo {
+    align-self: center;
+    margin-left: 5px;
+
+    span {
+      text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.7);
+
+      &:nth-child(1) {
+        font-family: SpicyRice;
+        font-size: 1.9rem;
+        color: $pink;
+      }
+
+      &:nth-child(2) {
+        font-family: Slacky;
+        font-size: 1.7rem;
+        color: $blue;
+      }
+    }
+  }
+
+  &-menu-btn {
+    align-self: center;
+    margin-left: auto;
+
+    button {
+      height: 100%;
+      border: none;
+      border-left: 1px solid $black;
+      background: $gray-200;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      div {
+        color: $black;
+        font-size: 1.8rem;
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -3px;
+  z-index: 1;
+  height: 230px;
+  overflow-x: hidden;
+  padding: 45px 0 0;
+  transition: 0.5s;
+  background: $gray-600;
+  text-align: center;
+  border: 3px solid black;
+  border-right: none;
+  border-top: none;
+
+  .side-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.5rem 0.7rem;
+    color: #000;
+    text-shadow: 0 0 6px $white;
+
+    &:hover {
+      cursor: pointer;
+      transition: 0.2s;
+      text-shadow: 0 0 6px $primary;
+    }
+  }
+
+  .nav-item {
+    padding: 15px 0;
+    color: #000;
+    font-size: 1.8rem;
+    font-family: Sansita;
+    display: block;
+    text-shadow: 0 0 6px $white;
+
+    &:hover {
+      cursor: pointer;
+      transition: 0.2s;
+      text-shadow: 0 0 6px $primary;
+    }
+  }
+}
